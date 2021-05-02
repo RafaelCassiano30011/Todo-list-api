@@ -5,9 +5,6 @@ import PrintTaskList from './modules/printTaskList/index.js'
 const $formBox = document.querySelector('.form-box')
 const $buttonNewTask = document.querySelector('.button-new-task')
 const $inputCreate = document.querySelector('.input-create')
-const allList = all.read()
-const BASE_URL = 'https://aula-crud.herokuapp.com'
-
 
 $formBox.addEventListener('submit', async(event) => {
     event.preventDefault()
@@ -32,8 +29,6 @@ $formBox.addEventListener('submit', async(event) => {
     }
 })
 
-
-
 const printReadApi = async() => {
     const taskList = await all.read()
 
@@ -41,6 +36,5 @@ const printReadApi = async() => {
         taskList: taskList,
         parent: '.box-task',
     })
-
 }
 printReadApi()

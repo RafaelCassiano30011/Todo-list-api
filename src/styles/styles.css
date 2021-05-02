@@ -8,7 +8,7 @@ body {
 }
 
 .container {
-    width: 100%;
+    max-width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -30,13 +30,14 @@ body {
 
 .box-task {
     margin-top: 20px;
-    min-width: 400px;
+    width: 400px;
     min-height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     background-color: white;
+    overflow-y: auto;
 }
 
 .form-box {
@@ -85,8 +86,7 @@ body {
 }
 
 .delete-trash {
-    position: absolute;
-    right: 1%;
+    padding-left: 50px;
     justify-content: center;
     width: 30px;
 }
@@ -113,4 +113,55 @@ body {
 
 .hide {
     display: none;
+}
+
+@media(max-width:400px) {
+    .box-title {
+        width: 80%;
+        font-size: 100%;
+        transition-duration: 800ms;
+    }
+    .box-task {
+        width: 80%;
+    }
+    .task-wrapper {
+        width: 50%;
+        font-size: 14px;
+        transition-duration: 800ms;
+    }
+    .delete-trash {
+        width: 24px;
+        height: 24px;
+        transition-duration: 800ms;
+    }
+    .checkbox {
+        width: 5px;
+        height: 5px;
+        transition-duration: 800ms;
+    }
+    .button-adicionar-tarefa {
+        width: 30%;
+        transition-duration: 800ms;
+        font-size: 10px;
+    }
+    .button-new-task {
+        width: 30%;
+        font-size: 10px;
+        transition-duration: 800ms;
+    }
+    input {
+        width: 20%;
+        height: 20%;
+        font-size: 10px;
+        text-align: center;
+        transition-duration: 800ms;
+    }
+}
+
+@media(max-height:490px) {
+    .box-title {
+        height: 10%;
+        font-size: 100%;
+        transition-duration: 800ms;
+    }
 }
